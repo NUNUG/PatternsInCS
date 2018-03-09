@@ -1,0 +1,16 @@
+Factory method and why it sniffs cow farts.
+- Can't unit test without subclassing production code.
+- Outer object creation is now affected by the creation of an inner object.  
+  Object1 must know something about object3 in order to construct object 2.
+  This is a primary violation of the Law of Demeter.
+- Does not favor composition over inheritance
+- Probably a violation of single responsibility principal and its caller unless the caller is not the creator.  This means
+  that you have just added the need for ANOTHER creator (factory) to create object2 so that object1 doesn't have to, 
+  effectively just deferring the factory's job to someone else.  
+- Doubles-up on the classes needed to do the abstraction.  Now you need one for each type of domain object PLUS a new descendent of the consumer for each one.
+- Moves different behaviors from one place to the parent.  The behavior code should be different in the GREETINGS, but instead, we move behavior code to the BUTLER.
+
+Use a factory method only if:
+- You want the creational details known outside of its domain.
+- You will only construct instances of ONE type of class with the factory method.
+- There is no logic involved in the creation.  I.E. reflection, canon,  hard-coding, etc.
