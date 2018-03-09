@@ -25,8 +25,8 @@ namespace Decorator
 
 		private void Execute()
 		{
-			IComponent component = GetOriginalComponent();
-			//IComponent component = GetDecoratedComponent();
+			//IComponent component = GetOriginalComponent();
+			IComponent component = GetDecoratedComponent();
 			component.ShowData();
 		}
 	}
