@@ -8,6 +8,6 @@ These are the C# implementations of most of the 23 patterns in the GoF Design Pa
  - State
   
 ## I have added some extra samples
- - NoFactory - This shows you what chaotic construction without factories will look like.
+ - NoFactory - This shows you what chaotic construction of the same objects without factories will look like.
 
- - Simple Factory - A simpler, easier-to-understand version of an abstrat factgory which only produces one kind of object instead of all objects for a domain.
+ - Simple Factory - A simpler, easier-to-understand version of an abstract factory which only produces one kind of object instead of all objects for a domain.
